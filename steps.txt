@@ -1,0 +1,26 @@
+1. Data Collection
+Source: You provided a CSV file containing customer shopping data with 19 columns, including Customer ID, Age, Gender, Item Purchased, Category, etc.
+2. Data Loading
+File: load_data.py
+Action: Loaded the CSV file into a pandas DataFrame and displayed an overview of the data.
+Outcome: Successfully loaded the data and displayed summary statistics, confirming no missing values or issues in data types.
+3. Data Preprocessing
+File: preprocess.py
+Action: Cleaned the data, handling categorical variables, encoding, and feature scaling.
+Outcome: Processed data saved to 'data/processed/processed_data.csv' for use in modeling.
+4. Model Setup
+File: train_model.py
+Action: Used RandomForestClassifier to build a binary classification model predicting whether a customer will make a purchase.
+Outcome: Model trained and saved to 'models/random_forest_purchase_model.pkl'.
+5. Model Evaluation
+File: train_model.py
+Action: Evaluated the model using accuracy and classification metrics like precision, recall, and F1-score.
+Outcome: Model accuracy: 50%, with the classification report showing balanced performance for both classes.
+6. Prediction Setup
+File: predict_purchase.py
+Action: Implemented code to make predictions using the trained model on new data.
+Outcome: Implemented a prediction pipeline, which processes input data and provides purchase predictions.
+7. Model and Prediction Testing
+Action: Tested the model by running train_model.py and predict_purchase.py to ensure everything worked as expected.
+8. Dependencies Setup
+Action: Created a requirements.txt file to include necessary libraries (numpy, pandas, scikit-learn, joblib, matplotlib, seaborn).
