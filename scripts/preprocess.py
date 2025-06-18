@@ -14,11 +14,6 @@ categorical_columns = [
     'Subscription Status', 'Payment Method', 'Shipping Type',
     'Discount Applied', 'Promo Code Used', 'Preferred Payment Method'
 ]
-label_encoders = {}
-for column in categorical_columns:
-    le = LabelEncoder()
-    data[column] = le.fit_transform(data[column])
-    label_encoders[column] = le  # Save encoder for later use
 
 # Map text values in 'Frequency of Purchases' to numerical categories
 frequency_mapping = {
@@ -31,7 +26,7 @@ frequency_mapping = {
 data['Frequency of Purchases'] = data['Frequency of Purchases'].map(frequency_mapping)
 
 # Normalize numerical columns
-numerical_columns = ['Age', 'Purchase Amount (USD)', 'Review Rating', 'Previous Purchases']
+numerical_columns = ['Age', 'Review Rating', 'Previous Purchases', 'Frequency of Purchases']
 scaler = StandardScaler()
 data[numerical_columns] = scaler.fit_transform(data[numerical_columns])
 

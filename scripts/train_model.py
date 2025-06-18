@@ -24,11 +24,7 @@ categorical_columns = [
     'Subscription Status', 'Payment Method', 'Shipping Type',
     'Discount Applied', 'Promo Code Used', 'Preferred Payment Method'
 ]
-numerical_columns = ['Age', 'Review Rating', 'Previous Purchases']
-
-# Convert all categorical columns to strings to ensure compatibility
-for col in categorical_columns:
-    X[col] = X[col].astype(str)
+numerical_columns = ['Age', 'Review Rating', 'Previous Purchases', 'Frequency of Purchases']
 
 # Define preprocessing pipeline
 preprocessor = ColumnTransformer(
